@@ -1,7 +1,7 @@
 import React from "react"
 
 describe("Placeholder", () => {
-  it("always passes", () => {
-    expect(true).toBeTruthy()
-  })
+    it("always passes", () => {
+        expect(true).toBeTruthy()
+    })
 })
