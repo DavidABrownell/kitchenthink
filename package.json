@@ -47,10 +47,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DavidABrownell/kitchenthink"
+    "url": "https://github.com/Ink/kitchenthink"
   },
   "bugs": {
-    "url": "https://github.com/DavidABrownell/kitchenthink/issues"
+    "url": "https://github.com/InkBrownell/kitchenthink/issues"
   },
   "husky": {
     "hooks": {
