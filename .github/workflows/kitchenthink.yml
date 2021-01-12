@@ -8,24 +8,20 @@ on:
 
 
 jobs:
-  build:
+  CI:
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Set Up Node.js ${{ matrix.node-version }}
+    - name: Set Up Node.js 14.x
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 14.x
 
-    - name: Install Clean Deps
+    - name: Install Clean Dependencies
       run: npm ci
 
     - name: Build
@@ -33,3 +29,14 @@ jobs:
 
     - name: Test
       run: npm test
+
+    - name: Deploy
+      if: github.ref == 'refs/heads/main'
+      uses: burnett01/rsync-deployments@4.1
+      with:
+        switches: -avzr --delete --exclude="" --include="" --filter=""
+        path: public/
+        remote_path: /home/kitchenthink/kitchenth.ink/
+        remote_host: kitchenth.ink
+        remote_user: kitchenthink
+        remote_key: ${{ secrets.DEPLOY_KEY }}
