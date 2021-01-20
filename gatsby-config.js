@@ -1,9 +1,9 @@
 module.exports = {
     siteMetadata: {
-        title: `Kitchenthink`,
+        title: `kitchenth.ink`,
         description: `Ink's personal website.`,
         author: `Ink Brownell`,
-        siteUrl: "https://kitchenth.ink",
+        siteUrl: 'https://kitchenth.ink',
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -29,13 +29,13 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-plugin-robots-txt",
+            resolve: 'gatsby-plugin-robots-txt',
             options: {
                 policy: [
                     {
-                        userAgent: "*",
-                        allow: "/",
-                        disallow: "",
+                        userAgent: '*',
+                        allow: '/',
+                        disallow: '',
                         crawlDelay: 2,
                     },
                 ],
