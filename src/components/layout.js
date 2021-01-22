@@ -33,20 +33,30 @@ const Layout = ({ children }) => {
                     padding: `0 1.0875rem 1.45rem`,
                 }}
             >
-                <main style={{ background: '#191418' }}>{children}</main>
+                <main
+                    style={{
+                        background: '#191418',
+                        padding: '3rem',
+                        borderRadius: '0.5rem',
+                    }}
+                >
+                    {children}
+                </main>
                 <footer
                     style={{
                         marginTop: `2rem`,
+                        textAlign: 'center',
                     }}
                 >
-                    © {new Date().getFullYear()} Ink Brownell <br />
-                    <a
-                        href="https://github.com/InkBrownell/kitchenthink"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        Source
-                    </a>
+                    <p>
+                        <a
+                            href="https://github.com/InkBrownell/kitchenthink"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Source
+                        </a>
+                    </p>
                 </footer>
             </div>
         </>

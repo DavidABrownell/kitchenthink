@@ -9,7 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: #fcfcfc;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -594,4 +594,49 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.boxedtext {
+  border-width: 0.15rem;
+  border-color: #fcfcfc;
+  border-style: solid;
+  margin-left: -0.1rem;
+  margin-top: -0.1rem;
+  margin-bottom: -0.1rem;
+  width: 1.6rem;
+  display: inline-block;
+  text-align: center;
+
+}
+
+.site-title {
+  margin: 0;
+  margin-top: -0.1rem;
+  color: #fcfcfc;
+  border-color: #fcfcfc;
+  background-color: #ea4836;
+  border-style: solid;
+  border-width: 0.15rem;
+  padding-left: 3.5rem;
+}
+
+.site-description {
+  margin: 0;
+  margin-top: -0.1rem;
+  color: #fcfcfc;
+  border-color: #fcfcfc;
+  background-color: #faae3f;
+  border-style: solid;
+  border-width: 0.15rem;
+  padding-left: 3.3rem;
+  font-size: 14pt;
+}
+
+.site-name {
+  margin-left: 1.5rem;
+  color: #fcfcfc;
+  letter-spacing: -0.175rem;
+  -webkit-text-fill-color: #ea4836;
+  -webkit-text-stroke-width: 0.09rem;
+  -webkit-text-stroke-color: #fcfcfc;
 }

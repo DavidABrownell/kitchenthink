@@ -1,11 +1,12 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import BoxedText from './boxedtext'
 
 const Header = ({ siteTitle }) => (
     <header
         style={{
-            background: `#eaeaea`,
+            background: `#191418`,
             marginBottom: `1.45rem`,
         }}
     >
@@ -16,17 +17,19 @@ const Header = ({ siteTitle }) => (
                 padding: `1.45rem 1.0875rem`,
             }}
         >
-            <h1 style={{ margin: 0 }}>
+            <h1 className="site-title">
                 <Link
                     to="/"
                     style={{
-                        color: '#343530',
                         textDecoration: `none`,
+                        color: 'inherit',
                     }}
                 >
-                    {siteTitle}
+                    <BoxedText text={siteTitle} />
                 </Link>
+                <span className="site-name">abcdefg</span>
             </h1>
+            <h2 className="site-description">abcdefg</h2>
         </div>
     </header>
 )
