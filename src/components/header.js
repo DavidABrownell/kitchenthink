@@ -1,15 +1,10 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import BoxedText from './boxedtext'
+import NavButton from './navbutton'
 
 const Header = ({ siteTitle }) => (
-    <header
-        style={{
-            background: `#191418`,
-            marginBottom: `1.45rem`,
-        }}
-    >
+    <header>
         <div
             style={{
                 margin: `0 auto`,
@@ -25,11 +20,25 @@ const Header = ({ siteTitle }) => (
                         color: 'inherit',
                     }}
                 >
-                    <BoxedText text={siteTitle} />
+                    {siteTitle}
                 </Link>
-                <span className="site-name">abcdefg</span>
             </h1>
-            <h2 className="site-description">abcdefg</h2>
+            <h2 className="site-description">
+                Ink Brownell &bull; Software Developer
+            </h2>
+            <nav
+                style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    marginBottom: '1rem',
+                }}
+            >
+                <NavButton to="/blog">Blog</NavButton>
+                <NavButton to="/resume">Résumé</NavButton>
+                <NavButton to="/projects">Projects</NavButton>
+                <NavButton to="/contact">Contact</NavButton>
+            </nav>
+            <hr />
         </div>
     </header>
 )

@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
             >
                 <main
                     style={{
-                        background: '#191418',
-                        padding: '3rem',
+                        background: '#f0f0f0',
+                        padding: '2.5rem',
                         borderRadius: '0.5rem',
                     }}
                 >

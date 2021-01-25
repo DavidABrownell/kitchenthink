@@ -9,7 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fcfcfc;
+  color: #191418;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -610,33 +610,49 @@ pre tt:after {
 }
 
 .site-title {
+  font-size: 40pt;
   margin: 0;
-  margin-top: -0.1rem;
-  color: #fcfcfc;
-  border-color: #fcfcfc;
-  background-color: #ea4836;
-  border-style: solid;
-  border-width: 0.15rem;
-  padding-left: 3.5rem;
+  color: #ea4836;
 }
 
 .site-description {
-  margin: 0;
-  margin-top: -0.1rem;
-  color: #fcfcfc;
-  border-color: #fcfcfc;
-  background-color: #faae3f;
-  border-style: solid;
-  border-width: 0.15rem;
+  margin: 0 0 0.5rem;
+  color: #faae3f;
   padding-left: 3.3rem;
   font-size: 14pt;
 }
 
-.site-name {
-  margin-left: 1.5rem;
+.nav-button {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+
+  padding: 0.5rem;
+  min-width: 6rem;
+  text-align: center;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
   color: #fcfcfc;
-  letter-spacing: -0.175rem;
-  -webkit-text-fill-color: #ea4836;
-  -webkit-text-stroke-width: 0.09rem;
-  -webkit-text-stroke-color: #fcfcfc;
+  background-color: #ea4836;
+  border-radius: 0.5rem;
+}
+
+.nav-button:link {
+  text-decoration: none;
+}
+
+.nav-button:visited {
+
+}
+
+.nav-button:hover {
+  background-color: #ff5724;
+}
+
+.nav-button:active {
+  background-color: #faae3f;
+}
+
+.nav-button-current {
+  background-color: #faae3f;
 }
