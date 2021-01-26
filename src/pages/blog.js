@@ -6,8 +6,11 @@ import BlogPreview from '../components/blogPreview'
 
 const Blog = () => {
     const query = useStaticQuery(graphql`
-        query {
-            allSitePage(filter: { path: { glob: "/blog/*" } }) {
+        query BlogPosts {
+            allSitePage(
+                filter: { path: { glob: "/blog/*" } }
+                sort: { fields: context___isoDate, order: DESC }
+            ) {
                 nodes {
                     context {
                         title
