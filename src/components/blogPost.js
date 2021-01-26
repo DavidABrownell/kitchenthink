@@ -12,12 +12,16 @@ const BlogPost = ({ data }) => {
     return (
         <Layout>
             <SEO title={title} />
-            <time dateTime={isoDate}>
-                <h2>{friendlyDate}</h2>
-            </time>
-            <h1>{title}</h1>
+            <article>
+                <header>
+                    <time dateTime={isoDate} className="post-date">
+                        {friendlyDate}
+                    </time>
+                    <h1>{title}</h1>
+                </header>
 
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+            </article>
         </Layout>
     )
 }
