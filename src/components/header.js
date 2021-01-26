@@ -24,11 +24,13 @@ const Header = ({ siteTitle }) => (
                 </Link>
             </h1>
             <h2 className="site-description">
-                Ink Brownell &bull; Software Developer
+                Ink&nbsp;Brownell &bull;&nbsp;Software&nbsp;Developer
             </h2>
             <nav
                 style={{
                     display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
                     justifyContent: 'flex-end',
                     marginBottom: '1rem',
                 }}
