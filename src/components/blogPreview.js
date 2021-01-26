@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby'
 
 const BlogPreview = ({ title, isoDate, friendlyDate, excerpt, slug, path }) => {
     return (
-        <div>
+        <div className="blog-preview">
             <time dateTime={isoDate} className="post-date">
                 {friendlyDate}
             </time>
