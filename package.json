@@ -5,8 +5,13 @@
   "version": "0.1.0",
   "author": "Ink Brownell <davidabrownell@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^2.31.1",
     "gatsby-image": "^2.10.0",
+    "gatsby-plugin-fontawesome-css": "^1.0.0",
     "gatsby-plugin-manifest": "^2.11.0",
     "gatsby-plugin-netlify-cms": "^4.9.0",
     "gatsby-plugin-offline": "^3.9.0",
