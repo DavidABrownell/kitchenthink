@@ -20,6 +20,15 @@ const Contact = () => {
                         LinkedIn
                     </a>
                 </li>
+                <li>
+                    <a
+                        href="https://github.com/InkBrownell"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </li>
             </ul>
             For business inquiries, please contact me via email.
         </Layout>
