@@ -10,6 +10,7 @@ const SocialMediaButton = ({ href, buttonName, children }) => {
             aria-label={buttonName}
         >
             {children}
+            {buttonName}
         </a>
     )
 }
