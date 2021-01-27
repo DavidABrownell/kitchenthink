@@ -6,6 +6,9 @@ const Projects = () => {
     return (
         <Layout>
             <SEO title="Projects" />
+            <h1>Projects</h1>
+
+            <p>Filling this section out is currently in progress.</p>
         </Layout>
     )
 }
