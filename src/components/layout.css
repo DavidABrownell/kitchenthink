@@ -53,10 +53,22 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: #ea4836;
+  border-bottom-color: #ea4836;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 0.15em;
 }
 a:active,
 a:hover {
-  outline-width: 0;
+  background-image: url("../images/link_squiggle.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 1rem;
+  border-bottom: 0;
+  padding-bottom: 0.20em;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
@@ -614,6 +626,7 @@ pre tt:after {
   font-weight: bold;
   margin: 0;
   color: #ea4836;
+  border-style: hidden;
 }
 
 .site-description {
@@ -637,6 +650,7 @@ pre tt:after {
   color: #fcfcfc;
   background-color: #ea4836;
   border-radius: 0.5rem;
+  border-style: hidden;
 }
 
 .nav-button:link {
@@ -649,6 +663,7 @@ pre tt:after {
 
 .nav-button:hover {
   background-color: #ff5724;
+  background-image: inherit;
 }
 
 .nav-button:active {

@@ -22,6 +22,7 @@ const Header = ({ siteTitle }) => (
                     style={{
                         textDecoration: `none`,
                         color: 'inherit',
+                        borderStyle: 'inherit',
                     }}
                 >
                     {siteTitle}
