@@ -629,6 +629,11 @@ pre tt:after {
   margin: 0;
   color: #ea4836;
   border-style: hidden;
+  padding: 0;
+}
+
+.site-title:hover {
+  background-image: none;
 }
 
 .site-description {
