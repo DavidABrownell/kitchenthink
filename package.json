@@ -40,6 +40,9 @@
     "prettier": "2.1.2",
     "react-test-renderer": "^17.0.1"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "keywords": [
     "gatsby"
   ],
