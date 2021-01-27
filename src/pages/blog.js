@@ -28,6 +28,7 @@ const Blog = () => {
     return (
         <Layout>
             <SEO title="Blog" />
+            <h1>Blog Posts</h1>
             {query.allSitePage.nodes.map(
                 (
                     {
@@ -55,6 +56,15 @@ const Blog = () => {
                     )
                 }
             )}
+            <div
+                style={{
+                    textAlign: 'center',
+                    fontStyle: 'italic',
+                    fontWeight: 'lighter',
+                }}
+            >
+                fin
+            </div>
         </Layout>
     )
 }

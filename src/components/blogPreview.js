@@ -8,7 +8,7 @@ const BlogPreview = ({ title, isoDate, friendlyDate, excerpt, slug, path }) => {
             <time dateTime={isoDate} className="post-date">
                 {friendlyDate}
             </time>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <p>{excerpt}</p>
             <Link to={path}>Read More</Link>
         </div>
