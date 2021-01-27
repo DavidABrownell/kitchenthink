@@ -53,13 +53,22 @@ const Header = ({ siteTitle }) => (
                     marginBottom: '1rem',
                 }}
             >
-                <SocialMediaButton href="mailto:ink@seattledevelopers.coop">
+                <SocialMediaButton
+                    href="mailto:ink@seattledevelopers.coop"
+                    buttonName="Email"
+                >
                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
                 </SocialMediaButton>
-                <SocialMediaButton href="https://github.com/InkBrownell">
+                <SocialMediaButton
+                    href="https://github.com/InkBrownell"
+                    buttonName="GitHub"
+                >
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                 </SocialMediaButton>
-                <SocialMediaButton href="https://www.linkedin.com/in/ink-brownell-39146b160/">
+                <SocialMediaButton
+                    href="https://www.linkedin.com/in/ink-brownell-39146b160/"
+                    buttonName="LinkedIn"
+                >
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </SocialMediaButton>
             </div>
