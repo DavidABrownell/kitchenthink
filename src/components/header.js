@@ -2,6 +2,10 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import NavButton from './navbutton'
+import SocialMediaButton from './socialMediaButton'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Header = ({ siteTitle }) => (
     <header>
@@ -24,7 +28,7 @@ const Header = ({ siteTitle }) => (
                 </Link>
             </h1>
             <h2 className="site-description">
-                Ink&nbsp;Brownell &bull;&nbsp;Software&nbsp;Developer
+                Ink&nbsp;Brownell &middot;&nbsp;Software&nbsp;Developer
             </h2>
             <nav
                 style={{
@@ -40,6 +44,25 @@ const Header = ({ siteTitle }) => (
                 <NavButton to="/projects">Projects</NavButton>
                 <NavButton to="/contact">Contact</NavButton>
             </nav>
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'flex-end',
+                    marginBottom: '1rem',
+                }}
+            >
+                <SocialMediaButton href="mailto:ink@seattledevelopers.coop">
+                    <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                </SocialMediaButton>
+                <SocialMediaButton href="https://github.com/InkBrownell">
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                </SocialMediaButton>
+                <SocialMediaButton href="https://www.linkedin.com/in/ink-brownell-39146b160/">
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </SocialMediaButton>
+            </div>
             <hr />
         </div>
     </header>

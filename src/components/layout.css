@@ -673,3 +673,9 @@ pre tt:after {
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
+.social-media-button {
+  color: #ea4836;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
