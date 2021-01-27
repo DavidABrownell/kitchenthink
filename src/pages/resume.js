@@ -47,6 +47,9 @@ const Resume = () => {
                     Associate of Science in Mechanical Engineering
                 </li>
             </ul>
+            <h2>
+                <Link to="/projects">Projects</Link>
+            </h2>
             <h2>Tools & Technologies</h2>
             <ul style={{ lineHeight: '80%', columnCount: 3 }}>
                 <li>Python</li>
