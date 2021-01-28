@@ -35,9 +35,11 @@ const Layout = ({ children }) => {
             >
                 <main
                     style={{
-                        background: '#f0f0f0',
                         padding: '2.5rem',
                         borderRadius: '0.5rem',
+                        borderColor: '#467599',
+                        borderWidth: '1px',
+                        borderStyle: 'solid',
                     }}
                 >
                     {children}

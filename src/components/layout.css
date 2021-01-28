@@ -1,3 +1,16 @@
+:root {
+  --rich-black-fogra-29: #0d1321ff;
+  --english-vermillion: #d64045ff;
+  --light-cyan: #e9fff9ff;
+  --powder-blue: #9ed8dbff;
+  --queen-blue: #467599ff;
+
+  --serif-font-stack: Palatino, 'Palatino Linotype', 'Palatino LT STD',
+    'Book Antiqua', Georgia, serif;
+  --sans-font-stack: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -5,20 +18,23 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #191418;
-  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif ;
+  color: var(--light-cyan);
+  background-color: var(--rich-black-fogra-29);
+  font-family: var(--serif-font-stack);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
+
 article,
 aside,
 details,
@@ -33,36 +49,42 @@ section,
 summary {
   display: block;
 }
+
 audio,
 canvas,
 progress,
 video {
   display: inline-block;
 }
+
 audio:not([controls]) {
   display: none;
   height: 0;
 }
+
 progress {
   vertical-align: baseline;
 }
+
 [hidden],
 template {
   display: none;
 }
+
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
-  color: #ea4836;
-  border-bottom-color: #ea4836;
+  color: #fb7770;
+  border-bottom-color: var(--english-vermillion);
   border-bottom-width: 1px;
   border-bottom-style: solid;
   padding-bottom: 0.15em;
 }
+
 a:active,
 a:hover {
-  background-image: url("../images/link_squiggle.svg");
+  background-image: url('../images/link_squiggle.svg');
   background-position: bottom;
   background-repeat: repeat-x;
   background-size: 1rem;
@@ -72,19 +94,23 @@ a:hover {
   padding-bottom: 0.15em;
   text-decoration: none;
 }
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
 }
+
 b,
 strong {
   font-weight: inherit;
   font-weight: bolder;
 }
+
 dfn {
   font-style: italic;
 }
+
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -95,20 +121,22 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
 }
+
 mark {
   background-color: #ff0;
   color: #000;
 }
+
 small {
   font-size: 80%;
 }
+
 sub,
 sup {
   font-size: 75%;
@@ -116,12 +144,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
+
 img {
   border-style: none;
   max-width: 100%;
@@ -134,9 +165,11 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
+
 code,
 kbd,
 pre,
@@ -144,6 +177,7 @@ samp {
   font-family: monospace;
   font-size: 1em;
 }
+
 figure {
   margin-left: 0;
   margin-right: 0;
@@ -154,6 +188,7 @@ figure {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 hr {
   box-sizing: content-box;
   overflow: visible;
@@ -169,6 +204,7 @@ hr {
   border: none;
   height: 1px;
 }
+
 button,
 input,
 optgroup,
@@ -177,36 +213,43 @@ textarea {
   font: inherit;
   margin: 0;
 }
+
 optgroup {
   font-weight: 700;
 }
+
 button,
 input {
   overflow: visible;
 }
+
 button,
 select {
   text-transform: none;
 }
-[type="reset"],
-[type="submit"],
+
+[type='reset'],
+[type='submit'],
 button,
-html [type="button"] {
+html [type='button'] {
   -webkit-appearance: button;
 }
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
+
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
 button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
+
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring,
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+
 fieldset {
   border: 1px solid silver;
   padding: 0.35em 0.625em 0.75em;
@@ -219,6 +262,7 @@ fieldset {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 legend {
   box-sizing: border-box;
   color: inherit;
@@ -227,43 +271,54 @@ legend {
   padding: 0;
   white-space: normal;
 }
+
 textarea {
   overflow: auto;
 }
-[type="checkbox"],
-[type="radio"] {
+
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
-[type="search"] {
+
+[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 ::-webkit-input-placeholder {
   color: inherit;
   opacity: 0.54;
 }
+
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
 }
+
 * {
   box-sizing: inherit;
 }
+
 *:before {
   box-sizing: inherit;
 }
+
 *:after {
   box-sizing: inherit;
 }
+
 h2 {
   margin-left: 0;
   margin-right: 0;
@@ -274,13 +329,13 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
 }
+
 h3 {
   margin-left: 0;
   margin-right: 0;
@@ -291,13 +346,13 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
   line-height: 1.1;
 }
+
 h4 {
   margin-left: 0;
   margin-right: 0;
@@ -308,13 +363,13 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
 }
+
 h5 {
   margin-left: 0;
   margin-right: 0;
@@ -325,13 +380,13 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1;
 }
+
 h6 {
   margin-left: 0;
   margin-right: 0;
@@ -342,13 +397,13 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
 }
+
 hgroup {
   margin-left: 0;
   margin-right: 0;
@@ -359,6 +414,7 @@ hgroup {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 ul {
   margin-left: 1.45rem;
   margin-right: 0;
@@ -371,6 +427,7 @@ ul {
   list-style-position: outside;
   list-style-image: none;
 }
+
 ol {
   margin-left: 1.45rem;
   margin-right: 0;
@@ -383,6 +440,7 @@ ol {
   list-style-position: outside;
   list-style-image: none;
 }
+
 dl {
   margin-left: 0;
   margin-right: 0;
@@ -393,6 +451,7 @@ dl {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 dd {
   margin-left: 0;
   margin-right: 0;
@@ -403,6 +462,7 @@ dd {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 p {
   margin-left: 0;
   margin-right: 0;
@@ -413,6 +473,7 @@ p {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 pre {
   margin-left: 0;
   margin-right: 0;
@@ -426,6 +487,7 @@ pre {
   word-wrap: normal;
   padding: 1.45rem;
 }
+
 table {
   margin-left: 0;
   margin-right: 0;
@@ -440,6 +502,7 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
+
 blockquote {
   margin-left: 1.45rem;
   margin-right: 1.45rem;
@@ -450,6 +513,7 @@ blockquote {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 form {
   margin-left: 0;
   margin-right: 0;
@@ -460,6 +524,7 @@ form {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 noscript {
   margin-left: 0;
   margin-right: 0;
@@ -470,6 +535,7 @@ noscript {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 iframe {
   margin-left: 0;
   margin-right: 0;
@@ -480,6 +546,7 @@ iframe {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 address {
   margin-left: 0;
   margin-right: 0;
@@ -490,144 +557,158 @@ address {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 b {
   font-weight: bold;
 }
+
 strong {
   font-weight: bold;
 }
+
 dt {
   font-weight: bold;
 }
+
 th {
   font-weight: bold;
 }
+
 li {
   margin-bottom: calc(1.45rem / 2);
 }
+
 ol li {
   padding-left: 0;
 }
+
 ul li {
   padding-left: 0;
 }
+
 li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
+
 li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
+
 blockquote *:last-child {
   margin-bottom: 0;
 }
+
 li *:last-child {
   margin-bottom: 0;
 }
+
 p *:last-child {
   margin-bottom: 0;
 }
+
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }
+
 code {
   font-size: 0.85rem;
   line-height: 1.45rem;
 }
+
 kbd {
   font-size: 0.85rem;
   line-height: 1.45rem;
 }
+
 samp {
   font-size: 0.85rem;
   line-height: 1.45rem;
 }
+
 abbr {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
 }
+
 acronym {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
 }
+
 thead {
   text-align: left;
 }
+
 td,
 th {
   text-align: left;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
   padding-left: 0.96667rem;
   padding-right: 0.96667rem;
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
 }
+
 th:first-child,
 td:first-child {
   padding-left: 0;
 }
+
 th:last-child,
 td:last-child {
   padding-right: 0;
 }
+
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
+    'Liberation Mono', Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
+
 pre code {
   background: none;
   line-height: 1.42;
 }
+
 code:before,
 code:after,
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
-  content: " ";
+  content: ' ';
 }
+
 pre code:before,
 pre code:after,
 pre tt:before,
 pre tt:after {
-  content: "";
+  content: '';
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
 }
 
-.boxedtext {
-  border-width: 0.15rem;
-  border-color: #fcfcfc;
-  border-style: solid;
-  margin-left: -0.1rem;
-  margin-top: -0.1rem;
-  margin-bottom: -0.1rem;
-  width: 1.6rem;
-  display: inline-block;
-  text-align: center;
-
-}
-
 .site-title {
   font-size: 40pt;
   font-weight: bold;
   margin: 0;
-  color: #ea4836;
+  color: var(--english-vermillion);
   border-style: hidden;
   padding: 0;
 }
@@ -638,8 +719,8 @@ pre tt:after {
 
 .site-description {
   margin: 0 0 0.5rem;
-  color: #191418;
   padding-left: 3.3rem;
+  color: var(--powder-blue);
   font-size: 14pt;
   font-weight: 350;
 }
@@ -651,11 +732,11 @@ pre tt:after {
   min-width: 6rem;
   text-align: center;
 
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: bold;
 
-  color: #fcfcfc;
-  background-color: #ea4836;
+  color: var(--light-cyan);
+  background-color: var(--queen-blue);
   border-radius: 0.5rem;
   border-style: hidden;
 }
@@ -665,24 +746,23 @@ pre tt:after {
 }
 
 .nav-button:visited {
-
 }
 
 .nav-button:hover {
-  background-color: #ff5724;
+  background-color: var(--powder-blue);
   background-image: inherit;
 }
 
 .nav-button:active {
-  background-color: #faae3f;
+  background-color: var(--english-vermillion);
 }
 
 .nav-button-current {
-  background-color: #faae3f;
+  background-color: var(--english-vermillion);
 }
 
 .post-date {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-style: oblique;
   font-weight: 300;
 }
@@ -690,7 +770,7 @@ pre tt:after {
 .blog-preview {
   border-style: solid;
   border-width: 1px;
-  border-color: #191418;
+  border-color: var(--powder-blue);
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -701,10 +781,12 @@ pre tt:after {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans-font-stack);
   font-weight: normal;
-  min-width: 6em;
-  color: #ea4836;
+  min-width: 6.5em;
+  color: var(--powder-blue);
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
