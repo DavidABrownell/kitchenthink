@@ -21,7 +21,6 @@ module.exports = {
             options: {
                 name: `blog`,
                 path: `${__dirname}/src/cms/blog`,
-                icon: `${__dirname}/src/images/kitchenthink.svg`,
             },
         },
         `gatsby-transformer-remark`,
