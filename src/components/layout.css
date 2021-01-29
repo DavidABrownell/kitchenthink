@@ -200,7 +200,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: var(--queen-blue);
   border: none;
   height: 1px;
 }
@@ -729,6 +729,7 @@ pre tt:after {
   margin: 0.25rem;
 
   padding: 0.5rem;
+  flex-grow: 1;
   min-width: 6rem;
   text-align: center;
 
@@ -738,7 +739,7 @@ pre tt:after {
   color: var(--light-cyan);
   background-color: var(--queen-blue);
   border-radius: 0.5rem;
-  border-style: hidden;
+  border-color: transparent;
 }
 
 .nav-button:link {
@@ -751,6 +752,7 @@ pre tt:after {
 .nav-button:hover {
   background-color: var(--powder-blue);
   background-image: inherit;
+  padding: 0.5rem;
 }
 
 .nav-button:active {
@@ -787,6 +789,8 @@ pre tt:after {
   color: var(--powder-blue);
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+
 }

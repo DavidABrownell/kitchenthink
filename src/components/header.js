@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
                     display: 'flex',
                     flexDirection: 'row',
                     flexWrap: 'wrap',
-                    justifyContent: 'flex-end',
+                    justifyContent: 'space-around',
                     marginBottom: '1rem',
                 }}
             >
@@ -51,7 +51,7 @@ const Header = ({ siteTitle }) => (
                     display: 'flex',
                     flexDirection: 'row',
                     flexWrap: 'wrap',
-                    justifyContent: 'flex-end',
+                    justifyContent: 'space-around',
                     marginBottom: '1rem',
                 }}
             >
