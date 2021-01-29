@@ -57,6 +57,20 @@ module.exports = {
                 icon: `${__dirname}/src/images/kitchenthink.svg`,
             },
         },
+        {
+            resolve: `gatsby-plugin-webmention`,
+            options: {
+                username: 'kitchenth.ink', // webmention.io username
+                identity: {
+                    github: 'InkBrownell',
+                    email: 'ink@seattledevelopers.coop',
+                },
+                mentions: true,
+                pingbacks: true,
+                domain: 'kitchenth.ink',
+                token: process.env.WEBMENTIONS_TOKEN,
+            },
+        },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
