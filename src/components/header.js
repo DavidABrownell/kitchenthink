@@ -75,6 +75,14 @@ const Header = ({ siteTitle }) => (
                 </SocialMediaButton>
             </div>
             <hr />
+            <link
+                rel="webmention"
+                href="https://webmention.io/kitchenth.ink/webmention"
+            />
+            <link
+                rel="pingback"
+                href="https://webmention.io/kitchenth.ink/xmlrpc"
+            />
         </div>
     </header>
 )
