@@ -29,8 +29,13 @@ const Header = ({ siteTitle }) => (
                     {siteTitle}
                 </Link>
             </h1>
-            <h2 className="site-description">
-                Ink&nbsp;Brownell &middot;&nbsp;Software&nbsp;Developer
+            <h2 className="site-description h-card">
+                <span className="p-name">
+                    <span className="p-given-name">Ink</span>&nbsp;
+                    <span className="p-family-name">Brownell</span>
+                </span>{' '}
+                &middot;&nbsp;
+                <span className="p-job-title">Software&nbsp;Developer</span>
             </h2>
             <nav
                 style={{
@@ -54,6 +59,7 @@ const Header = ({ siteTitle }) => (
                     justifyContent: 'space-around',
                     marginBottom: '1rem',
                 }}
+                className="h-card"
             >
                 <SocialMediaButton
                     href="mailto:ink@seattledevelopers.coop"
