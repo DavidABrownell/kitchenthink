@@ -32,7 +32,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         return
     }
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        const path = `blog/${node.frontmatter.slug}`
+        const path = `blog/${node.frontmatter.slug}/`
         const permalink = `${result.data.site.siteMetadata.siteUrl}/${path}`
         createPage({
             path: path,
