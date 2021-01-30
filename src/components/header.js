@@ -20,27 +20,30 @@ const Header = ({ siteTitle }) => (
                 padding: `1.45rem 1.0875rem`,
             }}
         >
-            <h1 className="site-title">
-                <Link
-                    to="/"
-                    style={{
-                        textDecoration: `none`,
-                        color: 'inherit',
-                        borderStyle: 'inherit',
-                        background: 'inherit',
-                    }}
-                >
-                    {siteTitle}
-                </Link>
-            </h1>
-            <h2 className="site-description h-card">
-                <span className="p-name">
-                    <span className="p-given-name">Ink</span>&nbsp;
-                    <span className="p-family-name">Brownell</span>
-                </span>{' '}
-                &middot;&nbsp;
-                <span className="p-job-title">Software&nbsp;Developer</span>
-            </h2>
+            <div className="h-card">
+                <h1 className="site-title">
+                    <Link
+                        to="/"
+                        style={{
+                            textDecoration: `none`,
+                            color: 'inherit',
+                            borderStyle: 'inherit',
+                            background: 'inherit',
+                        }}
+                        className="u-url u-uid"
+                    >
+                        {siteTitle}
+                    </Link>
+                </h1>
+                <h2 className="site-description">
+                    <span className="p-name">
+                        <span className="p-given-name">Ink</span>&nbsp;
+                        <span className="p-family-name">Brownell</span>
+                    </span>{' '}
+                    &middot;&nbsp;
+                    <span className="p-job-title">Software&nbsp;Developer</span>
+                </h2>
+            </div>
             <nav
                 style={{
                     display: 'flex',
