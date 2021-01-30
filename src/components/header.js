@@ -5,7 +5,11 @@ import NavButton from './navbutton'
 import SocialMediaButton from './socialMediaButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+    faGithub,
+    faLinkedin,
+    faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 
 const Header = ({ siteTitle }) => (
     <header>
@@ -78,6 +82,12 @@ const Header = ({ siteTitle }) => (
                     buttonName="LinkedIn"
                 >
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </SocialMediaButton>
+                <SocialMediaButton
+                    href="https://twitter.com/InkBrownell"
+                    buttonName="Twitter"
+                >
+                    <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </SocialMediaButton>
             </div>
             <hr />

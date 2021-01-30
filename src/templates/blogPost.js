@@ -3,11 +3,13 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import CommentSection from '../components/commentSection'
 
 const BlogPost = ({ data }) => {
-    const { markdownRemark } = data // data.markdownRemark holds your post data
+    const { markdownRemark, allWebMentionEntry } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
-    const { title, slug, isoDate, friendlyDate } = frontmatter
+    const { title, isoDate, friendlyDate } = frontmatter
+    const webMentions = allWebMentionEntry.edges
 
     return (
         <Layout>
@@ -17,8 +19,13 @@ const BlogPost = ({ data }) => {
                     <time dateTime={isoDate} className="post-date dt-published">
                         {friendlyDate}
                     </time>
+                    <span
+                        style={{ fontStyle: 'italic', float: 'right' }}
+                        className="p-author"
+                    >
+                        Ink Brownell
+                    </span>
                     <h1 className="p-name">{title}</h1>
-                    <span className="p-author">Ink Brownell</span>
                 </header>
 
                 <div
@@ -26,6 +33,7 @@ const BlogPost = ({ data }) => {
                     className="e-content"
                 />
             </article>
+            <CommentSection webMentions={webMentions} />
         </Layout>
     )
 }
@@ -35,7 +43,7 @@ BlogPost.propTypes = {
 }
 
 export const pageQuery = graphql`
-    query($slug: String!) {
+    query($slug: String!, $permalink: String!) {
         markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             html
             frontmatter {
@@ -43,6 +51,28 @@ export const pageQuery = graphql`
                 friendlyDate: date(formatString: "MMMM Do, YYYY")
                 slug
                 title
+            }
+        }
+        allWebMentionEntry(filter: { wmTarget: { eq: $permalink } }) {
+            edges {
+                node {
+                    wmTarget
+                    wmSource
+                    wmProperty
+                    wmId
+                    type
+                    url
+                    likeOf
+                    author {
+                        url
+                        type
+                        photo
+                        name
+                    }
+                    content {
+                        text
+                    }
+                }
             }
         }
     }

@@ -2,7 +2,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
     const blogPostTemplate = require.resolve(`./src/templates/blogPost.js`)
     const result = await graphql(`
-        {
+        query {
             allMarkdownRemark(
                 sort: { order: DESC, fields: [frontmatter___date] }
                 limit: 1000
@@ -19,6 +19,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     }
                 }
             }
+            site {
+                siteMetadata {
+                    siteUrl
+                }
+            }
         }
     `)
     // Handle errors
@@ -27,12 +32,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         return
     }
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const path = `blog/${node.frontmatter.slug}`
+        const permalink = `${result.data.site.siteMetadata.siteUrl}/${path}`
         createPage({
-            path: `blog/${node.frontmatter.slug}`,
+            path: path,
             component: blogPostTemplate,
             context: {
                 excerpt: node.excerpt,
                 slug: node.frontmatter.slug,
+                permalink: permalink,
                 isoDate: node.frontmatter.isoDate,
                 friendlyDate: node.frontmatter.friendlyDate,
                 title: node.frontmatter.title,

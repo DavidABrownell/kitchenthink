@@ -792,5 +792,20 @@ pre tt:after {
   margin-bottom: 0.5rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
 
+.comments-section {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--powder-blue);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.comment {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--powder-blue);
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
