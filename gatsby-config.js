@@ -63,6 +63,7 @@ module.exports = {
                 identity: {
                     github: 'InkBrownell',
                     email: 'ink@seattledevelopers.coop',
+                    twitter: 'InkBrownell',
                 },
                 mentions: true,
                 pingbacks: true,
