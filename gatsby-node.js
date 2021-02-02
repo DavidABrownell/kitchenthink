@@ -11,8 +11,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     node {
                         frontmatter {
                             slug
-                            isoDate: date(formatString: "YYYY-MM-DD")
-                            friendlyDate: date(formatString: "MMMM Do, YYYY")
+                            isoDate: date
+                            friendlyDate: date(
+                                formatString: "MMMM Do, YYYY HH:mm"
+                            )
                             title
                         }
                         excerpt(pruneLength: 140)

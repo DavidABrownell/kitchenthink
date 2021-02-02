@@ -802,10 +802,57 @@ pre tt:after {
   padding: 1rem;
 }
 
-.comment {
+.reply {
   border-style: solid;
   border-width: 1px;
   border-color: var(--powder-blue);
   border-radius: 0.5rem;
   padding: 1rem;
+}
+
+.reply-header {
+  overflow: auto;
+}
+
+.reply-profile-picture {
+  max-width: 4rem;
+  max-height: 4rem;
+  border-radius: 0.5rem;
+  float: left;
+}
+
+.reply-name {
+  margin-left: 1.5rem;
+  font-size: 1.25rem;
+  font-family: var(--sans-font-stack);
+  font-weight: bold;
+}
+
+.reply-source {
+  float: right;
+  font-style: italic;
+}
+
+.like-img {
+  padding: 0;
+  margin: 0;
+  max-height: 2.5rem;
+  max-width: 2.5rem;
+  border-radius: 1.25rem;
+  border-width: 0.15rem;
+  border-style: solid;
+  border-color: var(--english-vermillion);
+}
+
+.like-a {
+  border-style: none;
+}
+
+.like-a:hover {
+  background: inherit;
+}
+
+.likes-container {
+  display: flex;
+  margin-bottom: 1rem;
 }

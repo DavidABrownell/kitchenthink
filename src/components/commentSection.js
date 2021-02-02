@@ -1,21 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Comment from './comment'
+import Reply from './reply'
+import Like from './like'
 
 const CommentSection = ({ webMentions }) => {
-    const numComments = webMentions.length
+    const likes = webMentions.filter(({ node }) => node.likeOf)
+    const numLikes = likes.length
+    const replies = webMentions.filter(({ node }) => node.inReplyTo)
+    const numReplies = replies.length
+
     return (
         <div className="comments-section">
-            <h2>{numComments} Comments: </h2>
+            <h2>
+                {numLikes} {numLikes === 1 ? 'Like' : 'Likes'}
+            </h2>
 
-            {numComments > 0 ? (
-                <div className="comment">
-                    {webMentions.map((node, index) => {
-                        return <Comment node={node} key={index} />
-                    })}
-                </div>
+            <div className="likes-container">
+                {likes.map(({ node }, index) => {
+                    return <Like node={node} key={index} />
+                })}
+            </div>
+
+            <h2>
+                {numReplies} {numReplies === 1 ? 'Reply' : 'Replies'}:
+            </h2>
+
+            {numReplies > 0 ? (
+                replies.map(({ node }, index) => {
+                    return <Reply node={node} key={index} />
+                })
             ) : (
-                <p>No comments.</p>
+                <p>No Replies.</p>
             )}
         </div>
     )

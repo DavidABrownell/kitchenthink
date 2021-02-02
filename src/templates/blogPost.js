@@ -47,13 +47,16 @@ export const pageQuery = graphql`
         markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             html
             frontmatter {
-                isoDate: date(formatString: "YYYY-MM-DD")
-                friendlyDate: date(formatString: "MMMM Do, YYYY")
+                isoDate: date
+                friendlyDate: date(formatString: "MMMM Do, YYYY HH:mm")
                 slug
                 title
             }
         }
-        allWebMentionEntry(filter: { wmTarget: { eq: $permalink } }) {
+        allWebMentionEntry(
+            filter: { wmTarget: { eq: $permalink } }
+            sort: { order: DESC, fields: [published] }
+        ) {
             edges {
                 node {
                     wmTarget
@@ -63,6 +66,9 @@ export const pageQuery = graphql`
                     type
                     url
                     likeOf
+                    inReplyTo
+                    isoDate: published
+                    friendlyDate: published(formatString: "MMMM Do, YYYY HH:mm")
                     author {
                         url
                         type
