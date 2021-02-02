@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import CommentSection from '../components/commentSection'
 
 const BlogPost = ({ data }) => {
+    const siteUrl = data.site.siteMetadata.siteUrl
     const { markdownRemark, allWebMentionEntry } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
     const { title, isoDate, friendlyDate } = frontmatter
@@ -19,12 +20,13 @@ const BlogPost = ({ data }) => {
                     <time dateTime={isoDate} className="post-date dt-published">
                         {friendlyDate}
                     </time>
-                    <span
+                    <a
+                        href={siteUrl}
                         style={{ fontStyle: 'italic', float: 'right' }}
                         className="p-author"
                     >
                         Ink Brownell
-                    </span>
+                    </a>
                     <h1 className="p-name">{title}</h1>
                 </header>
 
@@ -79,6 +81,11 @@ export const pageQuery = graphql`
                         text
                     }
                 }
+            }
+        }
+        site {
+            siteMetadata {
+                siteUrl
             }
         }
     }
