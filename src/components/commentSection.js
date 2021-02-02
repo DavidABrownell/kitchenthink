@@ -4,7 +4,9 @@ import Reply from './reply'
 import Like from './like'
 
 const CommentSection = ({ webMentions }) => {
-    const likes = webMentions.filter(({ node }) => node.likeOf)
+    const likes = webMentions.filter(
+        ({ node }) => node.likeOf === node.wmTarget
+    )
     const numLikes = likes.length
     const replies = webMentions.filter(({ node }) => node.inReplyTo)
     const numReplies = replies.length
