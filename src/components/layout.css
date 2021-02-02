@@ -819,8 +819,8 @@ pre tt:after {
 }
 
 .reply-profile-picture {
-  max-width: 4rem;
-  max-height: 4rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 0.5rem;
   float: left;
 }
@@ -840,8 +840,8 @@ pre tt:after {
 .like-img {
   padding: 0;
   margin: 0;
-  max-height: 2.5rem;
-  max-width: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 1.25rem;
   border-width: 0.15rem;
   border-style: solid;
