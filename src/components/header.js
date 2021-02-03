@@ -53,10 +53,10 @@ const Header = ({ siteTitle }) => (
                     marginBottom: '1rem',
                 }}
             >
-                <NavButton to="/blog">Blog</NavButton>
-                <NavButton to="/resume">Résumé</NavButton>
-                <NavButton to="/projects">Projects</NavButton>
-                <NavButton to="/contact">Contact</NavButton>
+                <NavButton to="/blog/">Blog</NavButton>
+                <NavButton to="/resume/">Résumé</NavButton>
+                <NavButton to="/projects/">Projects</NavButton>
+                <NavButton to="/contact/">Contact</NavButton>
             </nav>
             <div
                 style={{
