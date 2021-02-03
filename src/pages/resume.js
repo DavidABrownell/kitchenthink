@@ -86,7 +86,7 @@ const Resume = () => {
                         </div>
                         <span className="p-summary">
                             Bachelor of Science in Computer Science,{' '}
-                            <i>magna cum laude</i>
+                            <i lang="la">magna cum laude</i>
                         </span>
                     </li>
                     <li className="p-education">
