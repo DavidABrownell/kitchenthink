@@ -1,16 +1,18 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import CommentSection from '../components/commentSection'
 import PosseLinks from '../components/posseLinks'
 
 const BlogPost = ({ data }) => {
     const siteUrl = data.site.siteMetadata.siteUrl
+
     const { markdownRemark, allWebMentionEntry } = data // data.markdownRemark holds your post data
-    const { frontmatter, html } = markdownRemark
-    const { title, isoDate, friendlyDate } = frontmatter
+    const { frontmatter, html, excerpt } = markdownRemark
+    const { title, isoDate, friendlyDate, slug } = frontmatter
+    const path = `/blog/${slug}/`
     const webMentions = allWebMentionEntry.edges
 
     return (
@@ -28,13 +30,17 @@ const BlogPost = ({ data }) => {
                     >
                         Ink Brownell
                     </a>
-                    <h1 className="p-name">{title}</h1>
+                    <h1 className="p-name">
+                        <Link to={path} className="u-url u-uid">
+                            {title}
+                        </Link>
+                    </h1>
                 </header>
-                <PosseLinks />
                 <div
                     dangerouslySetInnerHTML={{ __html: html }}
                     className="e-content"
                 />
+                <PosseLinks />
             </article>
             <CommentSection webMentions={webMentions} />
         </Layout>
@@ -43,6 +49,7 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
     data: PropTypes.object.isRequired,
+    permalink: PropTypes.string.isRequired,
 }
 
 export const pageQuery = graphql`
@@ -55,6 +62,7 @@ export const pageQuery = graphql`
                 slug
                 title
             }
+            excerpt
         }
         allWebMentionEntry(
             filter: { wmTarget: { eq: $permalink } }
