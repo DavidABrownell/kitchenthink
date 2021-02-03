@@ -30,12 +30,11 @@ const BlogPost = ({ data }) => {
                     </a>
                     <h1 className="p-name">{title}</h1>
                 </header>
-
+                <PosseLinks />
                 <div
                     dangerouslySetInnerHTML={{ __html: html }}
                     className="e-content"
                 />
-                <PosseLinks />
             </article>
             <CommentSection webMentions={webMentions} />
         </Layout>
