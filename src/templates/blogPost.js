@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import CommentSection from '../components/commentSection'
+import PosseLinks from '../components/posseLinks'
 
 const BlogPost = ({ data }) => {
     const siteUrl = data.site.siteMetadata.siteUrl
@@ -34,6 +35,7 @@ const BlogPost = ({ data }) => {
                     dangerouslySetInnerHTML={{ __html: html }}
                     className="e-content"
                 />
+                <PosseLinks />
             </article>
             <CommentSection webMentions={webMentions} />
         </Layout>
