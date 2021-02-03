@@ -30,26 +30,23 @@ Tests will also be run automatically on every push to Github.
 
 ## Deployment
 
-Github will deploy on pushes to `main` if CI tests pass. See
-[the github workflow](.github/workflows/kitchenthink.yml).
+This repo is currently deployed on Netlify. Pushes to the `main` branch will start deployment.
 
 ## License
 
 kitchenth.ink, a personal blog  
 Copyright (C) 2021 Ink Brownell
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public
+License as published by the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+details.
 
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
+You should have received a copy of the GNU Affero General Public License along with this program. If not,
+see <https://www.gnu.org/licenses/>.
 
 Note that this license does not extend to the content of the blog. That is, the code is licensed under the AGPLv3 or
 later, but the content is retained under exclusive copyright and may not be copied without permission.
