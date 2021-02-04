@@ -24,7 +24,7 @@ const CommentSection = ({ webMentions }) => {
             </div>
 
             <h2>
-                {numReplies} {numReplies === 1 ? 'Reply' : 'Replies'}:
+                {numReplies} {numReplies === 1 ? 'Reply' : 'Replies'}
             </h2>
 
             {numReplies > 0 ? (

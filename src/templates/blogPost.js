@@ -76,6 +76,7 @@ export const pageQuery = graphql`
                     wmId
                     type
                     url
+                    name
                     likeOf
                     inReplyTo
                     isoDate: published

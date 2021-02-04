@@ -28,6 +28,7 @@ const Reply = ({ node }) => {
         wmId,
         type,
         url,
+        name,
         author,
         content,
         isoDate,
@@ -35,7 +36,7 @@ const Reply = ({ node }) => {
     } = node
 
     return (
-        <div className="reply">
+        <div className="reply p-comment h-cite">
             <div className="reply-header">
                 <img
                     src={author.photo}
@@ -44,22 +45,26 @@ const Reply = ({ node }) => {
                 />
 
                 <div>
-                    <a href={author.url} className="reply-name">
+                    <a
+                        href={author.url}
+                        className="reply-name p-author h-card u-url"
+                    >
                         {author.name}
                     </a>
-                    <a href={url} className="reply-source">
+                    <a href={url} className="reply-source u-url u-uid">
                         Source
                     </a>
                 </div>
                 <time
-                    className="post-date"
+                    className="post-date dt-published"
                     dateTime={isoDate}
                     style={{ marginLeft: '2rem' }}
                 >
                     {friendlyDate}
                 </time>
             </div>
-            {content.text}
+            <h3 className="p-name">{name}</h3>
+            <span className="p-content">{content.text}</span>
         </div>
     )
 }
