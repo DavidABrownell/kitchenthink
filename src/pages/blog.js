@@ -9,7 +9,7 @@ const Blog = () => {
         query BlogPosts {
             allSitePage(
                 filter: { path: { glob: "/blog/*" } }
-                sort: { fields: context___isoDate, order: DESC }
+                sort: { fields: [context___isoDate], order: DESC }
             ) {
                 nodes {
                     context {

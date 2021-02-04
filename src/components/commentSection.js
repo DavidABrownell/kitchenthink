@@ -13,6 +13,29 @@ const CommentSection = ({ webMentions }) => {
 
     return (
         <div className="comments-section">
+            <p>
+                My blog supports{' '}
+                <a
+                    href="https://indieweb.org/Webmention"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Webmentions
+                </a>
+                ! There are a few ways to show up below. If you want to leave a
+                comment, you can reply to any of the syndicated copies above
+                (on, for example, Twitter), and your reply will be reproduced
+                here. Alternately, if you want to reply anonymously, you can use{' '}
+                <a
+                    href="https://commentpara.de/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    comment parade
+                </a>
+                . Finally, if you have publishing software that supports sending
+                Webmentions, you can send a mention to this post&apos;s URL!
+            </p>
             <h2>
                 {numLikes} {numLikes === 1 ? 'Like' : 'Likes'}
             </h2>

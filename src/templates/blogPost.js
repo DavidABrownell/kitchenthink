@@ -5,13 +5,21 @@ import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import CommentSection from '../components/commentSection'
 import PosseLinks from '../components/posseLinks'
+import SyndicationLinks from '../components/syndicationLinks'
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
     const siteUrl = data.site.siteMetadata.siteUrl
-
-    const { markdownRemark, allWebMentionEntry } = data // data.markdownRemark holds your post data
-    const { frontmatter, html, excerpt } = markdownRemark
-    const { title, isoDate, friendlyDate, slug } = frontmatter
+    const {
+        slug,
+        permalink,
+        isoDate,
+        friendlyDate,
+        title,
+        excerpt,
+        html,
+        syndicationUrls,
+    } = pageContext
+    const { allWebMentionEntry } = data
     const path = `/blog/${slug}/`
     const webMentions = allWebMentionEntry.edges
 
@@ -40,6 +48,10 @@ const BlogPost = ({ data }) => {
                     dangerouslySetInnerHTML={{ __html: html }}
                     className="e-content"
                 />
+                <SyndicationLinks
+                    originalPermalink={permalink}
+                    syndicationUrls={syndicationUrls}
+                />
                 <PosseLinks />
             </article>
             <CommentSection webMentions={webMentions} />
@@ -49,21 +61,11 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
     data: PropTypes.object.isRequired,
-    permalink: PropTypes.string.isRequired,
+    pageContext: PropTypes.object.isRequired,
 }
 
 export const pageQuery = graphql`
-    query($slug: String!, $permalink: String!) {
-        markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-            html
-            frontmatter {
-                isoDate: date
-                friendlyDate: date(formatString: "MMMM Do, YYYY HH:mm")
-                slug
-                title
-            }
-            excerpt
-        }
+    query($permalink: String!) {
         allWebMentionEntry(
             filter: { wmTarget: { eq: $permalink } }
             sort: { order: DESC, fields: [published] }

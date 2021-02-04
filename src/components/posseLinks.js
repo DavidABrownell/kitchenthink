@@ -1,9 +1,16 @@
 import React from 'react'
+import Silos from '../util/silos'
 
 const PosseLinks = () => {
     return (
         <>
-            <a href="https://brid.gy/publish/twitter" />
+            {Silos.map((silo, index) => (
+                <a
+                    href={silo.bridgyPublishUrl}
+                    key={index}
+                    aria-hidden={true}
+                />
+            ))}
         </>
     )
 }
