@@ -18,10 +18,10 @@ const Resume = () => {
                         <li>
                             Email:{' '}
                             <a
-                                href="mailto:ink@softwaredevelopers.coop"
+                                href="mailto:ink@seattledevelopers.coop"
                                 className="u-email"
                             >
-                                ink@softwaredevelopers.coop
+                                ink@seattledevelopers.coop
                             </a>
                         </li>
                     </ul>
