@@ -23,7 +23,12 @@ module.exports = {
                 path: `${__dirname}/src/cms/blog`,
             },
         },
-        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [`gatsby-remark-smartypants`],
+            },
+        },
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
