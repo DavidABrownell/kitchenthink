@@ -32,6 +32,31 @@ const Resume = () => {
                         <div className="h-card">
                             <strong>
                                 <a
+                                    href="http://www.seattledevelopers.coop/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    className="p-name p-org u-url"
+                                >
+                                    Seattle Developer&apos;s Cooperative
+                                </a>
+                            </strong>
+                            &mdash;<span className="p-locality">Seattle</span>,{' '}
+                            <span className="p-region">WA</span>
+                        </div>
+                        <em className="">
+                            <time dateTime="2021-01" className="dt-start">
+                                January 2021
+                            </time>
+                            &ndash;
+                            <time className="dt-end">Current</time>
+                        </em>{' '}
+                        <br />
+                        Web Developer
+                    </li>
+                    <li className="p-experience h-event">
+                        <div className="h-card">
+                            <strong>
+                                <a
                                     href="https://www.metergroup.com/"
                                     rel="noopener noreferrer"
                                     target="_blank"
